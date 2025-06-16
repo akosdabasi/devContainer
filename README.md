@@ -13,3 +13,11 @@ This project provides a lightweight Docker-based development environment for bar
 ## Why?
 
 The goal of this project is to create a simple embedded development environment image, that can be used in VS Code to have a reproducible easy to use dev environment without having to install any tools locally.
+
+## Usage
+
+To run the container interactively and mount the current working directory into the container, use the following command in PowerShell:
+
+```powershell
+docker run -it -v "${PWD}:/workspace" arm-dev:14.2
+```
