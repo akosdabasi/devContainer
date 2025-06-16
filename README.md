@@ -21,3 +21,30 @@ To run the container interactively and mount the current working directory into 
 ```powershell
 docker run -it -v "${PWD}:/workspace" arm-dev:14.2
 ```
+
+## Building and Publishing the Docker Image
+
+### 1. Build the Docker Image
+
+To build the Docker image from the current directory:
+
+```bash
+docker build -t your-dockerhub-username/arm-dev:14.2 .
+```
+
+### 2. Push the Docker Image
+
+To push the Docker image to Dockerhub:
+
+```bash
+docker push adabasi/arm-dev:14.2
+```
+
+### 3. Use the Docker Image
+
+To use the Docker image from anywhere:
+
+```bash
+docker pull your-dockerhub-username/arm-dev:14.2
+docker run -it -v "${PWD}:/workspace" your-dockerhub-username/arm-dev:14.2
+```
